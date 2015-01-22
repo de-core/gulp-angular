@@ -1,0 +1,36 @@
+<form name="userForm" novalidate ng-controller="userForm as form" ng-submit="form.sendMsg(user)">
+  <md-content class="md-padding">
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>Имя</label>
+        <input ng-model="form.user.firstName" required>
+        <div ng-messages="form.user.firstName.$error">
+          <div ng-message="required">Это поле обязательно</div>
+        </div>
+      </md-input-container>
+      <md-input-container flex>
+        <label>Фамилия</label>
+        <input ng-model="form.user.lastName" required>
+        <div ng-messages="form.user.lastName.$error">
+          <div ng-message="required">Это поле обязательно</div>
+        </div>
+      </md-input-container>
+    </div>
+    <md-input-container>
+      <label>Email</label>
+      <input ng-model="form.user.email" type="email" required>
+    </md-input-container>
+    <md-input-container flex>
+      <label>Компания</label>
+      <input ng-model="form.user.company">
+    </md-input-container>
+    <md-input-container flex>
+      <label>Ваше сообщение</label>
+      <textarea ng-model="form.user.message" columns="1" md-maxlength="1000"></textarea>
+    </md-input-container>
+    <md-button type="submit" class="md-primary md-hue-1" ng-submit="form.$valid">Отправить сообщение</md-button>
+    <p>Форма сообщения <strong>{{form.user}}</strong></p>
+
+    <p>Все сообщения <strong>{{user}}</strong></p>
+  </md-content>
+</form>
