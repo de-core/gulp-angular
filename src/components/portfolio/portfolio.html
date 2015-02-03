@@ -12,22 +12,21 @@
     </md-checkbox>
   </div>
 
-
-  <div class="portfolio-list" ng-repeat="items in portfolio.items">
+  <div class="portfolio-list" ng-repeat="item in items">
     <div class="portfolio-item md-whiteframe-z1">
       <div class="clearfix">
         <div class="screen-shot">
-          <img ng-src="{{items.image}}">
+          <img ng-src="{{item.image}}">
         </div>
         <div class="developers">
-          <h4 class="project-name">{{items.name}}</h4>
-          <h5 class="designer">Дизайн: {{items.design}}</h5>
-          <p class="frontend">Верстка: {{items.frontend}}</p>
-          <p class="backend">Серверная часть: {{items.backend}}</p>
-          <a href="{{items.url}}">{{items.url}}</a>
+          <h4 class="project-name">{{item.name}}</h4>
+          <h5 class="designer">Дизайн: {{item.design}}</h5>
+          <p class="frontend">Верстка: {{item.frontend}}</p>
+          <p class="backend">Серверная часть: {{item.backend}}</p>
+          <a href="{{item.url}}">{{item.url}}</a>
         </div>
       </div>
-      <p class="text">{{items.text}}</p>
+      <p class="text">{{item.text}}</p>
     </div>
   </div>
 </div>

@@ -54,7 +54,7 @@ app.controller "filterCtrl", ($scope) ->
       text: "Lorem ipsum dolor sit amet"
     }
   ]
-  console.log($scope.items)
+  # console.log($scope.items)
 
 
 
