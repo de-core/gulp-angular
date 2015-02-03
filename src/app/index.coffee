@@ -7,6 +7,12 @@ app = angular.module "gulpAngular", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSan
       .when "/contact",
         templateUrl: "components/contact-form/contact.html"
         controller: "MainCtrl"
+      .when "/portfolio",
+        templateUrl: "components/portfolio/portfolio.html"
+        controller: "MainCtrl"
+      .when "/about",
+        templateUrl: "app/main/about.html"
+        controller: "MainCtrl"
       .otherwise
         redirectTo: "/"
 
@@ -22,10 +28,37 @@ angular.module("sidenav", [ "ngMaterial" ]).controller("sideNav", ($scope, $time
 # тут незакенчена возня с отправкой данных из формы контакты
 user = {}
 app.controller "userForm", ($scope, $timeout) ->
-  this.user = {}
+  # this.user = {}
   this.sendMsg = (user) ->
     user.push(this.user)
     console.log(user)
+
+app.controller "filterCtrl", ($scope) ->
+
+  $scope.items = [
+    {
+      name: "Mokka"
+      image: "/assets/images/project/thumbs/mokka.png"
+      design: "Анна Ивойлова"
+      frontend: "Евгений Соловьев"
+      backend: "Евгений Морозов"
+      url: "http://mokka-media.ru/"
+      text: "Lorem ipsum dolor sit amet"
+    },
+    {
+      name: "Mokk"
+      image: "/assets/images/project/thumbs/mokka.png"
+      frontend: "Евгений Соловьев"
+      backend: "Евгений Морозов"
+      url: "http://mokka-media.ru/"
+      text: "Lorem ipsum dolor sit amet"
+    }
+  ]
+  console.log($scope.items)
+
+
+
 ###
+
 
 

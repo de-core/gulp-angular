@@ -18,13 +18,11 @@
     <!-- css files will be automaticaly insert here -->
     <!-- endinject -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
     <div layout="vertical" layout-fill>
-      <md-content>
+      <md-content class="main-wrapper-wrap">
         <div ng-controller="sideNav" layout="column" layout-fill class="main-wrapper">
           <section layout="row" flex>
             <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
@@ -34,13 +32,39 @@
               <md-content ng-controller="LeftCtrl">
                 <ul class="sidenav-list">
                   <li>
-                    <md-button href="#/about" class="md-primary">About</md-button>
+                    <md-button href="#/" class="md-primary">Информация</md-button>
+                  </li>
+                  <li>
+                    <md-button href="#/about" class="md-primary">Что мы делаем</md-button>
+                  </li>
+                  <li>
+                    <md-button href="#/portfolio" class="md-primary">Наши работы</md-button>
+                  </li>
+                  <li>
+                    <md-button href="#/" class="md-primary">Калькулятор</md-button>
                   </li>
                   <li>
                     <md-button href="#/contact" class="md-primary">Связаться с нами</md-button>
                   </li>
                 </ul>
               </md-content>
+              <div class="sidenav-footer">
+                <div class="partners">
+                  <h5>Наши партнеры:</h5>
+                  <img src="/assets/images/pt/pt3.png">
+                </div>
+                <section layout="row" layout-sm="column" layout-align="center center" class="sotial">
+                  <md-button class="md-fab" aria-label="Time">
+                    <i class="fa fa-vk"></i>
+                  </md-button>
+                  <md-button class="md-fab" aria-label="New document">
+                    <i class="fa fa-facebook"></i>
+                  </md-button>
+                  <md-button class="md-fab" aria-label="Comment">
+                    <i class="fa fa-twitter"></i>
+                  </md-button>
+                </section>
+              </div>
             </md-sidenav>
             <md-content class="content">
               <main>

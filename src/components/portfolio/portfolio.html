@@ -1,0 +1,33 @@
+<div class="portfolio" ng-controller="filterCtrl as portfolio">
+
+  <div class="portfolio-filter">
+    <md-checkbox aria-label="Checkbox 1">
+      Наш дизайн
+    </md-checkbox>
+    <md-checkbox aria-label="Checkbox 2">
+      Наш фронтенд
+    </md-checkbox>
+    <md-checkbox aria-label="Checkbox 3">
+      Наш бэкэнд
+    </md-checkbox>
+  </div>
+
+
+  <div class="portfolio-list" ng-repeat="items in portfolio.items">
+    <div class="portfolio-item md-whiteframe-z1">
+      <div class="clearfix">
+        <div class="screen-shot">
+          <img ng-src="{{items.image}}">
+        </div>
+        <div class="developers">
+          <h4 class="project-name">{{items.name}}</h4>
+          <h5 class="designer">Дизайн: {{items.design}}</h5>
+          <p class="frontend">Верстка: {{items.frontend}}</p>
+          <p class="backend">Серверная часть: {{items.backend}}</p>
+          <a href="{{items.url}}">{{items.url}}</a>
+        </div>
+      </div>
+      <p class="text">{{items.text}}</p>
+    </div>
+  </div>
+</div>

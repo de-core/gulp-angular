@@ -46,7 +46,9 @@ md-content
 
 md-sidenav
   height: 100vh
-  overflow-y: auto
+  float: left
+  position: fixed
+  overflow: hidden
   md-toolbar
     img
       height 88px
@@ -71,7 +73,7 @@ html.flexbox
     display: flex
     min-height: 100vh
     flex-direction: column
-    overflow-y: scroll
+    overflow-y: hidden
   main
     flex: 1 0 auto
   .content
@@ -79,3 +81,46 @@ html.flexbox
     flex-direction: column
   .main-wrapper
     min-height: 100vh
+  .main-wrapper-wrap
+    overflow: hidden
+article
+  padding: 15px
+  max-height: calc(100vh - 64px)
+  overflow-y: auto
+.sidenav-footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  .partners
+    text-align: center
+    h5
+      margin-bottom: 4px
+    img
+      max-width: 180px
+  .sotial
+    padding: 4px 0
+    background: black
+    i
+      font-size: 30px
+      color: white
+    .md-fab
+      margin: 0 6px
+.portfolio
+  .portfolio-filter
+    md-checkbox
+      display: inline-block
+  .portfolio-list
+    .portfolio-item
+      padding: 10px
+      .screen-shot
+        float: left
+        width: 420px
+        img
+          width: 100%
+      .developers
+        margin-left: 430px
+.clearfix
+  overflow: auto
+.portfolio-filter
+  md-checkbox.md-default-theme.md-checked .md-icon
+    background-color: green
